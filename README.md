@@ -1,7 +1,7 @@
 # 编写一个apache服务器
 
 ## 时序图
-![浏览器访问web服务器](bs-activity diagram.png "时序图")
+ ![浏览器访问web服务器](bs-activity-diagram.png "时序图")
 ## 应用的技术：
 ### http
 
