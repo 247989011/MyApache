@@ -19,14 +19,14 @@ public class Processor extends  Thread{
             this.is = socket.getInputStream();
             this.out = new PrintStream(socket.getOutputStream());
         }catch (Exception e){
-
+            e.printStackTrace();
         }
 
     }
 
     public void run(){
-       String filename =  parse(is);
 
+        String filename =  parse(is);
         sendFile(filename);
 
     }
@@ -35,8 +35,8 @@ public class Processor extends  Thread{
 
     //根据输出流获取资源文件名
     public String parse(InputStream is){
-        BufferedReader br = new BufferedReader(new InputStreamReader(is));
         try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String i ="";
 //            while (( i =br.readLine())!=null){
 //                System.out.println(i);
@@ -50,6 +50,7 @@ public class Processor extends  Thread{
             System.out.println("code:"+content[0]+",filename:"+content[1] +",http version:" + content[2]);
             return content[1];
         }catch (Exception e ){
+            sendErrorMsg(404,"not find the page!");
             e.printStackTrace();
         }
 
@@ -76,6 +77,7 @@ public class Processor extends  Thread{
             is.close();
         }catch (Exception e){
             e.printStackTrace();
+
         }
         return;
     }
@@ -101,6 +103,7 @@ public class Processor extends  Thread{
             return;
 
         }catch (Exception e ){
+            sendErrorMsg(404,"not find the page!");
             e.printStackTrace();
         }
 
