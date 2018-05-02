@@ -5,11 +5,35 @@
 ## 应用的技术：
 ### http
 
-### socket
 
+请求报文的一般格式（图片来源于网络）:
+![请求报文的一般格式](request-datatype.png "")
+
+响应报文格式（图片来源于网络）：
+![响应报文格式](response-datatype.jpg "")
+
+通用首部字段（图片来源于网络）：
+![通用首部字段](common_head_col.jpg "")
+
+请求首部字段（图片来源于网络）:
+![请求首部字段](request_head_col.jpg "")
+
+响应首部字段（图片来源于网络）:
+![响应首部字段](response_head_col.png "")
+![响应首部字段](response_head_col1.png "")
+
+### socket
+socket通信流程（图片来源于网络）:
+![socket通信流程](socket-proccess.png "")
 ### 流
 
+![流](stream.jpg "")
 ### Thread
+创建线程：
+1.实现Runnable接口
+2.继承Thread类
+线程生命周期(图片来源网络)：
+![线程生命周期](thread-proccess.jpg "")
 
 ### ThreadPool
 
