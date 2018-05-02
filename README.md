@@ -5,8 +5,7 @@
 ## 应用的技术：
 ### http
 
-
-请求报文的一般格式（图片来源于网络）:
+请求报文的一般格式（图片来源于网络）：
 ![请求报文的一般格式](request-datatype.png "")
 
 响应报文格式（图片来源于网络）：
@@ -29,9 +28,12 @@ socket通信流程（图片来源于网络）:
 
 ![流](stream.jpg "")
 ### Thread
+
 创建线程：
-1.实现Runnable接口
-2.继承Thread类
+
+    1.实现Runnable接口
+    2.继承Thread类
+
 线程生命周期(图片来源网络)：
 ![线程生命周期](thread-proccess.jpg "")
 
